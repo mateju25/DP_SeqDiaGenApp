@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+   <children>
+      <Pane prefHeight="950.0" prefWidth="1698.0">
+         <children>
+            <TextField fx:id="source" layoutX="14.0" layoutY="16.0" prefHeight="25.0" prefWidth="228.0" promptText="Source code" text="D:/Skola/DP/SeqDiaGen/src/test17/java" />
+            <TextField fx:id="output" layoutX="254.0" layoutY="16.0" prefHeight="25.0" prefWidth="228.0" promptText="Output" text="D:/Skola/DP/SeqDiaGen/out17/" />
+            <TextField fx:id="libs" layoutX="493.0" layoutY="16.0" prefHeight="25.0" prefWidth="228.0" promptText="Libs" text="D:/Skola/DP/SeqDiaGen/libs17" />
+            <Button fx:id="generate" layoutX="732.0" layoutY="16.0" mnemonicParsing="false" onAction="#generateOutput" text="Generate" />
+            <ScrollPane layoutY="84.0" prefHeight="866.0" prefWidth="1343.0">
+               <ImageView fx:id="imageView" fitHeight="855.0" fitWidth="1331.0" pickOnBounds="true" preserveRatio="true" />
+            </ScrollPane>
+            <Button fx:id="open" disable="true" layoutX="805.0" layoutY="16.0" mnemonicParsing="false" onAction="#openImage" text="Open" />
+            <Button layoutX="226.0" layoutY="16.0" mnemonicParsing="false" onAction="#findSourceCode" />
+            <Button layoutX="465.0" layoutY="16.0" mnemonicParsing="false" onAction="#findOutput" />
+            <Button layoutX="705.0" layoutY="16.0" mnemonicParsing="false" onAction="#findLibs" />
+            <HBox fx:id="participants" layoutX="485.0" layoutY="48.0" prefHeight="25.0" prefWidth="1206.0" />
+            <ListView fx:id="listView" layoutX="1343.0" layoutY="84.0" prefHeight="866.0" prefWidth="350.0" />
+            <CheckBox fx:id="onlyProject" layoutX="15.0" layoutY="42.0" mnemonicParsing="false" onAction="#changeOnlyProject" text="Only project" />
+            <CheckBox fx:id="noconstructors" layoutX="129.0" layoutY="42.0" mnemonicParsing="false" onAction="#rerenderImage" text="No constructors" />
+            <CheckBox fx:id="allConstructors" layoutX="254.0" layoutY="43.0" mnemonicParsing="false" onAction="#rerenderImage" text="All constructors / Avaiable constructors" />
+            <Button fx:id="tooltip" layoutX="14.0" layoutY="61.0" mnemonicParsing="false" onAction="#copyToClipboard" prefHeight="5.0" prefWidth="45.0" text="Code" />
+            <HBox fx:id="refs" layoutX="864.0" layoutY="16.0" prefHeight="25.0" prefWidth="813.0" />
+         </children>
+      </Pane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
